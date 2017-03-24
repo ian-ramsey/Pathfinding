@@ -15,7 +15,13 @@ public class Square implements Updateable {
       rect(x, y, w, w);
       fill(255);
       text(""+d, x, y+gridSize);
-    } else {
+    } else if(d==0){
+      fill(0,255,0);
+      rect(x, y, w, w);
+      fill(255,0,255);
+      text(""+d, x, y+gridSize);
+    } 
+    else{
       fill(255);
       rect(x, y, w, w);
       fill(0);

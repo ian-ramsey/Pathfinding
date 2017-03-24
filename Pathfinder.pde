@@ -3,6 +3,7 @@ public class Pathfinder implements Updateable {
   float y;
   int dx=0;
   int dy=0;
+  boolean isDone=false;
   public Pathfinder(int x1, int y1){
     x=x1;
     y=y1;
@@ -22,8 +23,7 @@ public class Pathfinder implements Updateable {
     catch(Exception e) {
     }
     if(!ctrl){
-    dx=0;
-    dy=0;
+    isDone=true;
     }
     x+=dx;
     y+=dy;
